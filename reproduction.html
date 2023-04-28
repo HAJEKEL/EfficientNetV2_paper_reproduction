@@ -24,17 +24,14 @@
 
         <!-- Intro -->
         <div id="intro">
-            <h1>Henk Jekel<br />
-                <p>Robotics engineer
+            <h1>EfficientnetV2<br />
+                <p>DARTS for neural architecture search
                 </p>
                 <p>
                     <a href="https://www.linkedin.com/in/henk-jekel-748054259/" target="_blank">
                         <img src="images/linkedin_icon.png" alt="LinkedIn Pictogram" width="35" height="35">
                     </a>
-                    <a href="https://www.kaggle.com/hajekel" target="_blank">
-                        <img src="images/kaggle_icon.png" alt="Kaggle Pictogram" width="35" height="35">
-                    </a>
-                    <a href="https://github.com/HAJEKEL" target="_blank">
+                    <a href="https://github.com/HAJEKEL/pt.darts" target="_blank">
                         <img src="images/github_icon.png" alt="Github Pictogram" width="35" height="35">
                     </a>
                     <a href="mailto:hendrikjekel@gmail.com" target="_blank">
@@ -50,15 +47,14 @@
 
         <!-- Header -->
         <header id="header">
-            <a href="index.html" class="logo">Home</a>
+            <a href="reproduction.html" class="logo">Home</a>
         </header>
 
         <!-- Nav -->
         <nav id="nav">
             <ul class="links">
-                <li class="active"><a href="index.html">Projects</a></li>
-                <li><a href="generic.html">About</a></li>
-                <li><a href="elements.html">Resume</a></li>
+                <li class="active"><a href="reproduction.html">Reproduction</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
             <ul class="icons">
                 <li><a href="https://www.linkedin.com/in/henk-jekel-748054259/"
@@ -77,29 +73,51 @@
             <!-- Featured Post -->
             <article class="post featured">
                 <header class="major">
-                    <span class="date">October 30, 2022</span>
-                    <h2><a href="#">Autonomous driving<br />
-                            ROS</a></h2>
+                    <span class="date">April 28, 2023</span>
+                    <h2><a href="#">EfficientnetV2<br />
+                            DARTS for neural architecture search</a></h2>
                 </header>
                 <a href="#" class="image fit"><img src="images/prius_project.png" alt="prius_project" /></a>
 
-                <p>In this university assignment, I developed software for autonomous driving
-                    of a Prius vehicle in a simulated test track utilizing the Robot Operating
-                    System (ROS). The Prius was equipped with two primary sensors, a front-facing
-                    camera located behind the windshield and a 360-degree top-mounted LIDAR sensor.
-                    The vehicle's system received the camera images and LIDAR point clouds as ROS topics.
+                <p>
+                    In this university project, we developed software that utilizes differentiable architecture search
+                    (DARTS) to determine the best building block for a cell. Specifically, we compared three types of
+                    blocks: Fused-MBConv, MBConv, and Depthwise Separable Convolution. Our motivation was to investigate
+                    the developmental process of the Fused-MBConv block, which is a superior architecture building block
+                    used in the state-of-the-art image recognizer, EfficientNetV2, developed by the Google brain team.
+                    We conducted a differentiable architecture search to evaluate the performance of these three blocks
+                    on the Fashion-MNIST dataset. Our research aimed to determine whether the Fused-MBConv block
+                    outperforms the MBConv and Depthwise Separable Convolution blocks, by tracing the evolutionary path
+                    of these blocks from MobileNet to the Squeeze-and-Excitation paper. Our findings show that the
+                    Fused-MBConv block is indeed a superior building block for cell architecture.
+                </p>
+                <p>
+                    In this university assignment, we developed software that implements differentible architecture
+                    search (DARTS)
+                    to see which of the three blocks, Fused-MBConv, MBConv and Depthwise seperable convolution would be
+                    celected for the cell searched by the algorithm.
+                    The paper EfficientnetV2 uses an unknown reinforcement
+                    learning based NAS algorithm to converge from the the MBConv blocks to the Fused-MBConv blocks.
+                    In this research we use differentiable architecture search (DARTS) as the NAS algorithm
+                    to show that the Fused-MBConv is indeed a superior architecture building block.
                 </p>
 
                 <p>
-                    The objective of this study was to design a virtual, controllable Prius vehicle that could
-                    detect obstacles and pedestrians using its sensors, and subsequently maneuver autonomously along
-                    a path defined by cones, avoiding all obstacles. Additionally, the vehicle was required to stop
-                    in the presence of pedestrians.
+                    The objective of the assignment was to replicate a section of the paper "EfficientNetv2: Smaller
+                    Models and Faster Training". The model described in the paper is a state-of-the-art image recogniser
+                    developed by the Google brain team. The group consensus was to investigate the developmental process
+                    of the Fused-MBConv block utilized in
+                    Efficientnet. The research focused on tracing the evolutionary path of the Fused-MBConv block. This
+                    involved exploring the depthwise separable convolutions from MobileNet, progressing to the MBConv
+                    block which incorporated principles from the Squeeze-and-Excitation paper, and ultimately culminated
+                    in the development of the Fused-MBConv block.
+
                 </p>
                 <p>
-                    For this study, the university supplied a simulation platform comprised of a virtual vehicle and
-                    environment. To accomplish the autonomous driving task, we implemented three additional ROS
-                    packages as the solution.
+                    The aim of this study was to investigate whether the Fused-MBConv block outperforms the MbConv and
+                    DsConv blocks. To evaluate this, a differentiable architecture search was conducted, whereby the
+                    search algorithm was only permitted to select from the three block options. The search was performed
+                    on the Fashion-MNIST dataset.
                 </p>
                 <div class="row">
 
