@@ -7,7 +7,7 @@
 <html>
 
 <head>
-    <title>Home | Henk Jekel </title>
+    <title>EfficientnetV2 </title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="assets/css/main.css" />
@@ -54,7 +54,6 @@
         <nav id="nav">
             <ul class="links">
                 <li class="active"><a href="reproduction.html">Reproduction</a></li>
-                <li><a href="about.html">About</a></li>
             </ul>
             <ul class="icons">
                 <li><a href="https://www.linkedin.com/in/henk-jekel-748054259/"
@@ -77,181 +76,178 @@
                     <h2><a href="#">EfficientnetV2<br />
                             DARTS for neural architecture search</a></h2>
                 </header>
-                <a href="#" class="image fit"><img src="images/prius_project.png" alt="prius_project" /></a>
-
+                <a class="image fit"><img src="images/EP50-reduce.png" alt="prius_project" /></a>
+                <h1>
+                    Abstract
+                </h1>
                 <p>
-                    In this university project, we developed software that utilizes differentiable architecture search
-                    (DARTS) to determine the best building block for a cell. Specifically, we compared three types of
-                    blocks: Fused-MBConv, MBConv, and Depthwise Separable Convolution. Our motivation was to investigate
-                    the developmental process of the Fused-MBConv block, which is a superior architecture building block
-                    used in the state-of-the-art image recognizer, EfficientNetV2, developed by the Google brain team.
-                    We conducted a differentiable architecture search to evaluate the performance of these three blocks
-                    on the Fashion-MNIST dataset. Our research aimed to determine whether the Fused-MBConv block
-                    outperforms the MBConv and Depthwise Separable Convolution blocks, by tracing the evolutionary path
-                    of these blocks from MobileNet to the Squeeze-and-Excitation paper. Our findings show that the
-                    Fused-MBConv block is indeed a superior building block for cell architecture.
-                </p>
-                <p>
-                    In this university assignment, we developed software that implements differentible architecture
-                    search (DARTS)
-                    to see which of the three blocks, Fused-MBConv, MBConv and Depthwise seperable convolution would be
-                    celected for the cell searched by the algorithm.
-                    The paper EfficientnetV2 uses an unknown reinforcement
-                    learning based NAS algorithm to converge from the the MBConv blocks to the Fused-MBConv blocks.
-                    In this research we use differentiable architecture search (DARTS) as the NAS algorithm
-                    to show that the Fused-MBConv is indeed a superior architecture building block.
-                </p>
-
-                <p>
-                    The objective of the assignment was to replicate a section of the paper "EfficientNetv2: Smaller
-                    Models and Faster Training". The model described in the paper is a state-of-the-art image recogniser
-                    developed by the Google brain team. The group consensus was to investigate the developmental process
-                    of the Fused-MBConv block utilized in
-                    Efficientnet. The research focused on tracing the evolutionary path of the Fused-MBConv block. This
-                    involved exploring the depthwise separable convolutions from MobileNet, progressing to the MBConv
-                    block which incorporated principles from the Squeeze-and-Excitation paper, and ultimately culminated
-                    in the development of the Fused-MBConv block.
+                    For this university project, software was developed to utilize differentiable architecture search
+                    (DARTS) to determine the best building block for a cell. Specifically, three types of blocks were
+                    compared: Fused-MBConv, MBConv, and Depthwise Separable Convolution. The motivation behind the
+                    project was to investigate the developmental process of the Fused-MBConv block, which is a superior
+                    architecture building block used in the state-of-the-art image recognizer, EfficientNetV2, developed
+                    by the Google brain team. A differentiable architecture search was conducted to evaluate the
+                    performance of these three blocks on the Fashion-MNIST dataset. The research aimed to prove that the
+                    DARTS algorithm would choose the best block among the three types that were evaluated. However, the
+                    findings indicated that for the reduce cell, the algorithm found a mixture of blocks, and for the
+                    normal cell, it only used the weakest block, which is the Depthwise Separable Convolution, for
+                    unknown reasons.
 
                 </p>
+                <h1>
+                    Introduction
+                </h1>
                 <p>
-                    The aim of this study was to investigate whether the Fused-MBConv block outperforms the MbConv and
-                    DsConv blocks. To evaluate this, a differentiable architecture search was conducted, whereby the
-                    search algorithm was only permitted to select from the three block options. The search was performed
-                    on the Fashion-MNIST dataset.
+                    The field of deep learning has witnessed remarkable advancements in the development of efficient
+                    image recognition models. One such example is the EfficientNetV2, a state-of-the-art image
+                    recognizer developed by the Google brain team. The model used an unknown reinforcement
+                    learning-based Neural Architecture Search (NAS) algorithm to converge from the MBConv blocks to the
+                    Fused-MBConv blocks. In this study, we investigated the evolutionary path of the Fused-MBConv block
+                    and discovered that the Mobilenets depthwise separable convolution (DSConv), inverted residuals, and
+                    linear
+                    bottlenecks together with the squeeze and excitation block paved the way for the MBConv block and
+                    the Fused-MBConv block. By employing the Differentiable Architecture Search (DARTS) algorithm, we
+                    explored the performance of three different architecture building blocks, namely Fused-MBConv,
+                    MBConv, and DSConv, on the Fashion-MNIST dataset.
                 </p>
-                <div class="row">
 
+                <h1>
+                    Literature research
+                </h1>
 
-                    <ul>
-                        <li>As part of the solution, we created an "opencv_person_detector" package that contained a
-                            node capable of detecting 2D bounding boxes around all individuals in a camera image
-                            through
-                            the use of OpenCV.</li>
-                        <li>Additionally, we developed a "pcl_obstacle_detector" package that included a node for
-                            detecting 3D bounding boxes around all barrels present in the LIDAR point cloud through
-                            the
-                            use of Point Cloud Library (PCL).</li>
-                        <li>Finally, we created a "control_barrel_world" package that comprised a node responsible
-                            for
-                            controlling the vehicle. This node subscribed to both the 3D barrel detections and 2D
-                            person
-                            detections, and published control messages to drive the vehicle.</li>
-
-                    </ul>
-
-                </div>
                 <p>
-                    The accompanying illustration showcases the topics and nodes incorporated in the solution.
-                </p>
-                <a href="#" class="image fit"><img src="images/prius_solution.png" alt="prius_project" /></a>
 
-                <p>The source code for this project must be kept confidential. A recording of the functioning simulation
-                    after the implementation of the solution is provided below, albeit with some lag in the display due
-                    to the GIF format.</p>
-                <a href="#" class="image fit"><img src="images/prius_project.gif" alt="prius_project" /></a>
+                    The evolutionary path of the Fused-MBConv block refers to the development of architectural building
+                    blocks that led to the creation of the Fused-MBConv block. The Fused-MBConv block is a type of
+                    convolutional neural network (CNN) block that has proven to be effective in improving the accuracy
+                    and efficiency of image recognition models.
+
+                    The Mobilenets DSConv was one of the earliest architectural innovations
+                    that led to the development of the Fused-MBConv block. It involves a two-step convolution process
+                    that separates the spatial and depth-wise convolutional operations, resulting in significant
+                    reduction of the computational cost.
+
+                    More details on DSConv in the downloadable pdf:
 
 
                 <ul class="actions special">
-                    <li><a href="#" class="button large">View project</a></li>
+                    <li><a href="MobileNets.pdf" class="button large">Download PDF</a></li>
                 </ul>
 
-            </article>
 
-            <!-- Posts -->
-            <section class="posts">
-                <article>
-                    <header>
-                        <span class="date">Januari 20, 2022</span>
-                        <h2><a href="#">RRT* motion planning<br />
-                                for a mobile robot<br />
-                                in a Parking lot scenario</a></h2>
-                    </header>
-                    <a href="#" class="image fit"><img src="images/rrt_.gif" alt="" /></a>
-                    <p>Both the RRT and RRT* single query path planning algorithms were implemented for a mobile robot
-                        in a parking lot scenario without utilizing a planner module, and their results were analyzed.
-                        The robot, represented through a kinematic bicycle model, was able to follow the computed path
-                        with the assistance of a PD controller. The simulation was conducted using the Pygame platform.
+                The inverted residuals and linear bottlenecks were introduced in the MobileNetV2 architecture, which
+                is an extension of the Mobilenets. These architectural innovations helped to address the problem of
+                poor accuracy in Mobilenets and further improved the computational efficiency of the model.
+
+                The squeeze and excitation block is another architectural innovation that influenced the
+                evolutionary path. The Squeeze-and-Excitation paper proposed a mechanism to selectively emphasize
+                important channels while suppressing less important ones in convolutional layers to improve accuracy
+                on image classification benchmarks.
+
+                All of these architectural innovations eventually led to the development of the MBConv block, which
+                incorporates the DSConv of Mobilenets, the inverted residuals and linear
+                bottlenecks of MobileNetV2, and the squeeze and excitation block. The Fused-MBConv block combines
+                two of the operations within the MBConv block, leading to faster computation.
+
+                More details on mobilenetv2, MBConv and Fused-MBConv in the downloadable pdf:
+
+                <ul class="actions special">
+                    <li><a href="mobilenetv2_efficientnet.pdf" class="button large">Download PDF</a></li>
+                </ul>
+                </p>
+                <div class="row">
+
+                    <h1>
+                        Methods
+                    </h1>
+                    <p>
+                        DARTS (Differentiable Architecture Search) is a method for automating the search for neural
+                        network architectures. The goal is to find the best architecture for a given task without
+                        requiring human expertise in designing neural networks.
+
+                        In the search stage, the DARTS algorithm uses a differentiable relaxation of the architecture
+                        search space to learn the best architecture. This involves learning the weights of the different
+                        network operations in the architecture. The operations out of which DARTS could choose where
+                        DSConv,
+                        MBConv and Fused-MBConv.
+
+                        In the context of DARTS (Differentiable Architecture Search), the terms "normal" and "reduce"
+                        are used to refer to two distinct types of cells that are utilized in the process of
+                        architecture search.
+
+                        A "normal" cell is defined as a cell that maintains an unchanged spatial resolution between the
+                        input and output, whereas a "reduce" cell is a cell that reduces the spatial resolution between
+                        the input and output.
+
+                        More details on DARTS in the downloadable pdf:
+
                     </p>
                     <ul class="actions special">
-                        <li><a href="#" class="button">View Project</a></li>
+                        <li><a href="MobileNets.pdf" class="button large">Download PDF</a></li>
                     </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Date</span>
-                        <h2><a href="#">Future <br />
-                                projects</a></h2>
-                    </header>
-                    <a href="#" class="image fit"><img src="images/pic03.jpg" alt="" /></a>
-                    <p>Future projects</p>
-                    <ul class="actions special">
-                        <li><a href="#" class="button">View Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Date</span>
-                        <h2><a href="#">Future<br />
-                                Projects</a></h2>
-                    </header>
-                    <a href="#" class="image fit"><img src="images/pic04.jpg" alt="" /></a>
-                    <p>Future projects</p>
-                    <ul class="actions special">
-                        <li><a href="#" class="button">View Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Date</span>
-                        <h2><a href="#">Future<br />
-                                Projects</a></h2>
-                    </header>
-                    <a href="#" class="image fit"><img src="images/pic05.jpg" alt="" /></a>
-                    <p>Future projects. </p>
-                    <ul class="actions special">
-                        <li><a href="#" class="button">View Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Date</span>
-                        <h2><a href="#">Future<br />
-                                Projects</a></h2>
-                    </header>
-                    <a href="#" class="image fit"><img src="images/pic06.jpg" alt="" /></a>
-                    <p>Future projects</p>
-                    <ul class="actions special">
-                        <li><a href="#" class="button">View Project</a></li>
-                    </ul>
-                </article>
-                <article>
-                    <header>
-                        <span class="date">Date</span>
-                        <h2><a href="#">Future<br />
-                                Projects</a></h2>
-                    </header>
-                    <a href="#" class="image fit"><img src="images/pic07.jpg" alt="" /></a>
-                    <p>Future Projects</p>
-                    <ul class="actions special">
-                        <li><a href="#" class="button">View Project</a></li>
-                    </ul>
-                </article>
-            </section>
+                    <h1>
+                        Results
+                    </h1>
+                    <p>
+                        Our experiments involved training DARTS on the FashionMNIST dataset for 50 epochs, using the
+                        only available operations DSConv, MBConv, and Fused-mbconv. We present two visualizations of our
+                        training process, including a gif displaying the progress of each epoch for both the normal and
+                        reduce cells, respectively. Additionally, we provide an image with two plots demonstrating the
+                        progress of our training: the first plot shows the progression of the loss over the course of
+                        the training process, while the second plot shows the corresponding accuracy progression. These
+                        visualizations and plots provide insight into the effectiveness and efficiency of our training
+                        process, demonstrating the potential of DARTS to be applied to real-world tasks.
+                        <a href="#" class="image fit"><img src="images/normal.gif" alt="prius_project" /></a>
+                        <a href="#" class="image fit"><img src="images/reduce.gif" alt="prius_project" /></a>
+                        <a href="#" class="image fit"><img src="images/loss_accuracy.png" alt="prius_project" /></a>
 
-            <!-- Footer -->
-            <footer>
-                <div class="pagination">
-                    <!--<a href="#" class="previous">Prev</a>-->
-                    <a href="#" class="page active">1</a>
-                    <a href="#" class="page">2</a>
-                    <a href="#" class="page">3</a>
-                    <span class="extra">&hellip;</span>
-                    <a href="#" class="page">8</a>
-                    <a href="#" class="page">9</a>
-                    <a href="#" class="page">10</a>
-                    <a href="#" class="next">Next</a>
-                </div>
-            </footer>
+                        The training log can be found on github:
+                    <ul class="actions special">
+                        <li><a href="https://github.com/HAJEKEL/pt.darts/blob/master/searchs/fashionmnist/fashionmnist.log"
+                                class="button large">Visit training log</a></li>
+                    </ul>
+
+
+                    </p>
+                    <h1>
+                        Conclusion
+                    </h1>
+                    <p>
+                        The high accuracy rates and low loss observed in both the training and validation indicate that
+                        the training process was successful. The model has effectively learned the underlying patterns
+                        in the data, as evidenced by the consistently low training loss. Furthermore, analysis of the
+                        log of the last epoch suggests that the reduce operations generally outperform the normal
+                        operations in terms of the softmax values for Alpha - normal and Alpha - reduce. This finding
+                        suggests that the reduce operations are more important for achieving good performance on
+                        FashionMNIST. Of note, the fusedmbconv operation has the highest alpha values among all
+                        operations, underscoring its critical role in achieving strong results on the FashionMNIST
+                        dataset. Taken together, these results demonstrate that the model has been trained effectively
+                        and performs well on the given data.
+
+
+
+                    </p>
+
+                    <h>Code</h>
+                    <p>
+                        Code for this blog:
+                    <ul class="actions special">
+                        <li><a href="https://github.com/HAJEKEL/EfficientNetV2_paper_reproduction/tree/website"
+                                class="button large">WEBSITE</a></li>
+                    </ul>
+                    Code to reproduce the training using google colab and google compute engine:
+                    <ul class="actions special">
+                        <li><a href="https://github.com/HAJEKEL/EfficientNetV2_paper_reproduction"
+                                class="button large">TRAINING</a></li>
+                    </ul>
+                    Code for the DARTS implementation with operations DSConv MBConv and Fused-MBConv:
+                    <ul class="actions special">
+                        <li><a href="https://github.com/HAJEKEL/pt.darts/tree/darts_efficient_mobilenet"
+                                class="button large">DARTS</a></li>
+                    </ul>
+                    </p>
+            </article>
+
 
         </div>
 
@@ -274,8 +270,6 @@
                         <li><a href="https://www.linkedin.com/in/henk-jekel-748054259/"
                                 class="icon brands alt fa-linkedin"><span class="label">LinkedIn</span></a>
                         </li>
-                        <li><a href="https://www.kaggle.com/hajekel" class="icon brands fa-kaggle"><span
-                                    class="label">Kaggle</span></a></li>
                         <li><a href="https://github.com/HAJEKEL" class="icon brands alt fa-github"><span
                                     class="label">GitHub</span></a></li>
                     </ul>
