@@ -1,27 +1,3 @@
-# Search
-To reproduce the DARTS search one can create a google compute engine virtual machine instance. The search cannot be performed in google colab directly as the runtime is too long and will quit before end of execution. 
-
-Create google compute engine virtual machine instance:
-Raise gpu quota all regions:
-- Go to https://console.cloud.google.com/
-- Create a new project
-- Go to Quotas IAM and admin
-- Search for gpus_all_regions
-- Select and Edit quotas, apply for at least 1 gpu in all regions
-
-Start google colab VM instance with gpu:
--   Search for "colab marketplace", hit launch.
--   Deploy the VM. 
--   Iterate through different Zone's if there is no available VM instance in the current region.
-Connect google colab runtime to VM instance:
--   Click "Connect to a custom GCE VM" 
--   Add GCE project ID, zone of VM and the VM instance. 
-
-Start DARTS search:
-The file dart_search can be used to reproduce the results. 
-
-Developer settings, personal access tokens, token classic, 
-
 # DARTS Search Reproduction
 
 This repository contains instructions for reproducing the DARTS (Differentiable Architecture Search) search with a google colab [ipynb file](https://github.com/HAJEKEL/EfficientNetV2_paper_reproduction/blob/main/darts_search.ipynb) running on a Google Compute Engine (GCE) virtual machine instance with a GPU. The DARTS source code can be found in the [pt.darts](https://github.com/HAJEKEL/pt.darts/tree/darts_efficient_mobilenet) repo. 
