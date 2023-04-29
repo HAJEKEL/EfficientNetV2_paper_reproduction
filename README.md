@@ -1,4 +1,4 @@
-Search
+# Search
 To reproduce the DARTS search one can create a google compute engine virtual machine instance. The search cannot be performed in google colab directly as the runtime is too long and will quit before end of execution. 
 
 Create google compute engine virtual machine instance:
