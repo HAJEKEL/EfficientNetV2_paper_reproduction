@@ -29,6 +29,7 @@ To reproduce the DARTS search, follow the steps below:
    - Add the GCE project ID, zone of the VM, and the VM instance name.
 4. Follow the steps inside the [ipynb file](https://github.com/HAJEKEL/EfficientNetV2_paper_reproduction/blob/main/darts_search.ipynb):
    - Comments inside the file explain what's going on. 
+   - Note that the source code allows for training on 3 different datasets, MNIST, fashionMNIST and CIFAR10. Options for the search such as which dataset and the number of epochs, are defined in [config.py](https://github.com/HAJEKEL/pt.darts/blob/master/config.py).
 
 ## Darts algoritm
 
