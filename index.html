@@ -24,7 +24,7 @@
 
         <!-- Intro -->
         <div id="intro">
-            <h1>EfficientnetV2<br />
+            <h2>EfficientnetV2<br />
                 <p>DARTS for neural architecture search
                 </p>
                 <p>
@@ -47,13 +47,13 @@
 
         <!-- Header -->
         <header id="header">
-            <a href="index.html" class="logo">Home</a>
+            <a href="https://hajekel.github.io/" class="logo">Home</a>
         </header>
 
         <!-- Nav -->
         <nav id="nav">
             <ul class="links">
-                <li class="active"><a href="index.html">Reproduction</a></li>
+                <li class="active"><a>BLOG</a></li>
             </ul>
             <ul class="icons">
                 <li><a href="https://www.linkedin.com/in/henk-jekel-748054259/"
@@ -73,15 +73,15 @@
             <article class="post featured">
                 <header class="major">
                     <span class="date">April 28, 2023</span>
-                    <h2><a href="#">EfficientnetV2<br />
+                    <h2><a>EfficientnetV2<br />
                             DARTS for neural architecture search</a></h2>
                 </header>
                 <a class="image fit"><img src="images/EP50-reduce.png" alt="EP50-reduce" /></a>
-                <h1>
+                <h2>
                     Abstract
-                </h1>
+                </h2>
                 <p>
-                    For this university project, software was developed to utilize differentiable architecture search
+                    In this project, software was developed to utilize differentiable architecture search
                     (DARTS) to determine the best building block for a cell. Specifically, three types of blocks were
                     compared: Fused-MBConv, MBConv, and Depthwise Separable Convolution. The motivation behind the
                     project was to investigate the developmental process of the Fused-MBConv block, which is a superior
@@ -94,26 +94,25 @@
                     unknown reasons.
 
                 </p>
-                <h1>
+                <h2>
                     Introduction
-                </h1>
+                </h2>
                 <p>
-                    The field of deep learning has witnessed remarkable advancements in the development of efficient
-                    image recognition models. One such example is the EfficientNetV2, a state-of-the-art image
-                    recognizer developed by the Google brain team. The model used an unknown reinforcement
-                    learning-based Neural Architecture Search (NAS) algorithm to converge from the MBConv blocks to the
-                    Fused-MBConv blocks. In this study, we investigated the evolutionary path of the Fused-MBConv block
-                    and discovered that the Mobilenets depthwise separable convolution (DSConv), inverted residuals, and
-                    linear
-                    bottlenecks together with the squeeze and excitation block paved the way for the MBConv block and
-                    the Fused-MBConv block. By employing the Differentiable Architecture Search (DARTS) algorithm, we
-                    explored the performance of three different architecture building blocks, namely Fused-MBConv,
-                    MBConv, and DSConv, on the Fashion-MNIST dataset.
+                    The field of deep learning has experienced significant advancements in the development of efficient
+                    image recognition models. One of the examples is the EfficientNetV2, which is a state-of-the-art
+                    image recognizer developed by the Google brain team. An unknown reinforcement learning-based Neural
+                    Architecture Search (NAS) algorithm was used by the model to converge from the MBConv blocks to the
+                    Fused-MBConv blocks. In this study, the evolutionary path of the Fused-MBConv block was
+                    investigated, and it was discovered that the Mobilenets depthwise separable convolution (DSConv),
+                    inverted residuals, and linear bottlenecks together with the squeeze and excitation block paved the
+                    way for the MBConv block and the Fused-MBConv block. By employing the Differentiable Architecture
+                    Search (DARTS) algorithm, the performance of three different architecture building blocks, namely
+                    Fused-MBConv, MBConv, and DSConv, was explored on the Fashion-MNIST dataset.
                 </p>
 
-                <h1>
+                <h2>
                     Literature research
-                </h1>
+                </h2>
 
                 <p>
 
@@ -155,114 +154,119 @@
                     <li><a href="mobilenetv2_efficientnet.pdf" class="button large">Download PDF</a></li>
                 </ul>
                 </p>
-                <div class="row">
 
-                    <h1>
-                        Methods
-                    </h1>
-                    <p>
-                        DARTS (Differentiable Architecture Search) is a method for automating the search for neural
-                        network architectures. The goal is to find the best architecture for a given task without
-                        requiring human expertise in designing neural networks.
+                <h2>
+                    Methods
+                </h2>
+                <p>
+                    DARTS (Differentiable Architecture Search) is a method for automating the search for neural
+                    network architectures. The goal is to find the best architecture for a given task without
+                    requiring human expertise in designing neural networks.
 
-                        In the search stage, the DARTS algorithm uses a differentiable relaxation of the architecture
-                        search space to learn the best architecture. This involves learning the weights of the different
-                        network operations in the architecture. The operations out of which DARTS could choose where
-                        DSConv,
-                        MBConv and Fused-MBConv.
+                    In the search stage, the DARTS algorithm uses a differentiable relaxation of the architecture
+                    search space to learn the best architecture. This involves learning the weights of the different
+                    network operations in the architecture. The operations out of which DARTS could choose where
+                    DSConv,
+                    MBConv and Fused-MBConv.
 
-                        The DARTS search was based on the Fashion-MNIST dataset. The Fashion-MNIST dataset is a popular
-                        benchmark dataset used in machine learning and computer vision research. It consists of 70,000
-                        grayscale images of 28x28 pixels each, divided into 10 classes, with 7,000 images per class. The
-                        classes include T-shirts/tops, trousers, pullovers, dresses, coats, sandals, shirts, sneakers,
-                        bags, and ankle boots. The dataset is a more challenging alternative to the classic MNIST
-                        dataset, as it features more complex images with greater variability in the appearance of the
-                        different classes.
+                    The DARTS search was based on the Fashion-MNIST dataset. The Fashion-MNIST dataset is a popular
+                    benchmark dataset used in machine learning and computer vision research. It consists of 70,000
+                    grayscale images of 28x28 pixels each, divided into 10 classes, with 7,000 images per class. The
+                    classes include T-shirts/tops, trousers, pullovers, dresses, coats, sandals, shirts, sneakers,
+                    bags, and ankle boots. The dataset is a more challenging alternative to the classic MNIST
+                    dataset, as it features more complex images with greater variability in the appearance of the
+                    different classes.
 
-                        It is worth noting that the distribution of the classes is roughly balanced, with each class
-                        accounting for 10% of the dataset. This makes the dataset suitable for evaluating the
-                        performance of machine learning algorithms in a multi-class classification setting.
+                    It is worth noting that the distribution of the classes is roughly balanced, with each class
+                    accounting for 10% of the dataset. This makes the dataset suitable for evaluating the
+                    performance of machine learning algorithms in a multi-class classification setting.
 
-                        In the context of DARTS (Differentiable Architecture Search), the terms "normal" and "reduce"
-                        are used to refer to two distinct types of cells that are utilized in the process of
-                        architecture search.
+                    In the context of DARTS (Differentiable Architecture Search), the terms "normal" and "reduce"
+                    are used to refer to two distinct types of cells that are utilized in the process of
+                    architecture search.
 
-                        A "normal" cell is defined as a cell that maintains an unchanged spatial resolution between the
-                        input and output, whereas a "reduce" cell is a cell that reduces the spatial resolution between
-                        the input and output.
+                    A "normal" cell is defined as a cell that maintains an unchanged spatial resolution between the
+                    input and output, whereas a "reduce" cell is a cell that reduces the spatial resolution between
+                    the input and output.
 
-                        More details on DARTS in the downloadable pdf:
+                    More details on DARTS in the downloadable pdf:
 
-                    </p>
-                    <ul class="actions special">
-                        <li><a href="DARTS.pdf" class="button large">Download PDF</a></li>
-                    </ul>
-                    <h1>
-                        Results
-                    </h1>
-                    <p>
-                        Our experiments involved training DARTS on the FashionMNIST dataset for 50 epochs, using the
-                        only available operations DSConv, MBConv, and Fused-mbconv. We present two visualizations of our
-                        training process, including a gif displaying the progress of each epoch for both the normal and
-                        reduce cells, respectively. Additionally, we provide an image with two plots demonstrating the
-                        progress of our training: the first plot shows the progression of the loss over the course of
-                        the training process, while the second plot shows the corresponding accuracy progression. These
-                        visualizations and plots provide insight into the effectiveness and efficiency of our training
-                        process, demonstrating the potential of DARTS to be applied to real-world tasks.
-                        <a href="#" class="image fit"><img src="images/normal.gif" alt="normal" /></a>
-                        <a href="#" class="image fit"><img src="images/reduce.gif" alt="reduce" /></a>
-                        <a href="#" class="image fit"><img src="images/loss_accuracy.png" alt="loss_accuracy" /></a>
-
-                        The training log can be found on github:
-                    <ul class="actions special">
-                        <li><a href="https://github.com/HAJEKEL/pt.darts/blob/master/searchs/fashionmnist/fashionmnist.log"
-                                class="button large">Visit training log</a></li>
-                    </ul>
-
-
-                    </p>
-                    <h1>
-                        Conclusion
-                    </h1>
-                    <p>
-                        The high accuracy rates and low loss observed in both the training and validation indicate that
-                        the training process was successful. The model has effectively learned the underlying patterns
-                        in the data, as evidenced by the consistently low training loss. Furthermore, analysis of the
-                        log of the last epoch suggests that the reduce operations generally outperform the normal
-                        operations in terms of the softmax values for Alpha - normal and Alpha - reduce. This finding
-                        suggests that the reduce operations are more important for achieving good performance on
-                        FashionMNIST. Of note, the fusedmbconv operation has the highest alpha values among all
-                        operations, underscoring its critical role in achieving strong results on the FashionMNIST
-                        dataset. Taken together, these results demonstrate that the model has been trained effectively
-                        and performs well on the given data.
+                </p>
+                <ul class="actions special">
+                    <li><a href="DARTS.pdf" class="button large">Download PDF</a></li>
+                </ul>
+                <h2>
+                    Results
+                </h2>
+                <p>
+                    The experiments conducted involved training DARTS on the FashionMNIST dataset for 50 epochs,
+                    utilizing the only available operations DSConv, MBConv, and Fused-mbconv. Two visualizations of
+                    the training process were presented, which included a gif that displayed the progress of each
+                    epoch for both the normal and reduce cells. Additionally, an image was provided that contained
+                    two plots demonstrating the progress of the training: the first plot indicated the progression
+                    of the loss throughout the training process, while the second plot showed the corresponding
+                    accuracy progression. These visualizations and plots were indicative of the effectiveness and
+                    efficiency of the training process, and demonstrated the potential of DARTS to be employed in
+                    real-world tasks.
 
 
 
-                    </p>
 
-                    <h1>
-                        Code implementation
-                    </h1>
 
-                    <p>
-                        Code for this blog:
-                    <ul class="actions special">
-                        <li><a href="https://github.com/HAJEKEL/EfficientNetV2_paper_reproduction/tree/website"
-                                class="button large">WEBSITE</a></li>
-                    </ul>
-                    <p> Code to reproduce the training using google colab and google compute engine:
-                    </p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/HAJEKEL/EfficientNetV2_paper_reproduction"
-                                class="button large">TRAINING</a></li>
-                    </ul>
-                    <p> Code for the DARTS implementation with operations DSConv MBConv and Fused-MBConv:
-                    </p>
-                    <ul class="actions special">
-                        <li><a href="https://github.com/HAJEKEL/pt.darts/tree/darts_efficient_mobilenet"
-                                class="button large">DARTS</a></li>
-                    </ul>
-                    </p>
+                    <a href="#" class="image fit"><img src="images/normal.gif" alt="normal" /></a>
+                    <a href="#" class="image fit"><img src="images/reduce.gif" alt="reduce" /></a>
+                    <a href="#" class="image fit"><img src="images/loss_accuracy.png" alt="loss_accuracy" /></a>
+
+                    The training log can be found on github:
+                <ul class="actions special">
+                    <li><a href="https://github.com/HAJEKEL/pt.darts/blob/master/searchs/fashionmnist/fashionmnist.log"
+                            class="button large">Visit training log</a></li>
+                </ul>
+
+
+                </p>
+                <h2>
+                    Conclusion
+                </h2>
+                <p>
+                    The high accuracy rates and low loss observed in both the training and validation indicate that
+                    the training process was successful. The model has effectively learned the underlying patterns
+                    in the data, as evidenced by the consistently low training loss. Furthermore, analysis of the
+                    log of the last epoch suggests that the reduce operations generally outperform the normal
+                    operations in terms of the softmax values for Alpha - normal and Alpha - reduce. This finding
+                    suggests that the reduce operations are more important for achieving good performance on
+                    FashionMNIST. Of note, the fusedmbconv operation has the highest alpha values among all
+                    operations, underscoring its critical role in achieving strong results on the FashionMNIST
+                    dataset. Taken together, these results demonstrate that the model has been trained effectively
+                    and performs well on the given data.
+
+
+
+                </p>
+
+                <h2>
+                    Code implementation
+                </h2>
+
+                <p>
+                    Code for this blog:
+                <ul class="actions special">
+                    <li><a href="https://github.com/HAJEKEL/EfficientNetV2_paper_reproduction/tree/website"
+                            class="button large">WEBSITE</a></li>
+                </ul>
+                <p> Code to reproduce the training using google colab and google compute engine:
+                </p>
+                <ul class="actions special">
+                    <li><a href="https://github.com/HAJEKEL/EfficientNetV2_paper_reproduction"
+                            class="button large">TRAINING</a></li>
+                </ul>
+                <p> Code for the DARTS implementation with operations DSConv MBConv and Fused-MBConv:
+                </p>
+                <ul class="actions special">
+                    <li><a href="https://github.com/HAJEKEL/pt.darts/tree/darts_efficient_mobilenet"
+                            class="button large">DARTS</a></li>
+                </ul>
+                </p>
             </article>
 
 

@@ -1,1 +1,5 @@
-# EfficientNetV2_paper_reproduction
+# Blog
+
+This blog post describes how software was developed to utilize differentiable architecture search (DARTS) to determine the best building block for a cell. Specifically, three types of blocks were compared: Fused-MBConv, MBConv, and Depthwise Separable Convolution. The motivation behind the project was to investigate the developmental process of the Fused-MBConv block, which is a superior architecture building block used in the state-of-the-art image recognizer, EfficientNetV2, developed by the Google brain team.
+
+A differentiable architecture search was conducted to evaluate the performance of these three blocks on the Fashion-MNIST dataset. The research aimed to prove that the DARTS algorithm would choose the best block among the three types that were evaluated. However, the findings indicated that for the reduce cell, the algorithm found a mixture of blocks, and for the normal cell, it only used the weakest block, which is the Depthwise Separable Convolution, for unknown reasons.
