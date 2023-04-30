@@ -39,18 +39,12 @@
             </p>
             <ul class="actions">
                 <li>
-                    <span>Keep reading to learn more:</span>
-                    <a href="#header" class="button icon solid solo fa-arrow-down scrolly">Continue</a>
+                    <h4>Keep reading to learn more</h4>
+                    <a href="#nav" class="button icon solid solo fa-arrow-down scrolly">Continue</a>
                 </li>
             </ul>
         </div>
 
-
-
-        <!-- Header -->
-        <header id="header">
-            <a href="https://hajekel.github.io/" class="logo">Back to portfolio</a>
-        </header>
 
         <!-- Nav -->
         <nav id="nav">
@@ -93,15 +87,18 @@
                 <p>
                     In this project, software was developed to utilize differentiable architecture search
                     (DARTS) to determine the best building block for a cell. Specifically, three types of blocks were
-                    compared: Fused-MBConv, MBConv, and Depthwise Separable Convolution. The motivation behind the
+                    compared: mobile inverted bottleneck (MBConv), Fused-MBConv and Depthwise Separable Convolution
+                    (DSConv). The motivation behind the
                     project was to investigate the developmental process of the Fused-MBConv block, which is a superior
                     architecture building block used in the state-of-the-art image recognizer, EfficientNetV2, developed
                     by the Google brain team. A differentiable architecture search was conducted to evaluate the
                     performance of these three blocks on the Fashion-MNIST dataset. The research aimed to prove that the
-                    DARTS algorithm would choose the best block among the three types that were evaluated. However, the
-                    findings indicated that for the reduce cell, the algorithm found a mixture of blocks, and for the
-                    normal cell, it only used the weakest block, which is the Depthwise Separable Convolution, for
-                    unknown reasons.
+                    DARTS algorithm would choose the best block among the three types that were evaluated.However, the
+                    results showed that for the reduce cell, the algorithm identified a combination of blocks, whereas
+                    for the normal cell, it only employed the weakest block, which is the DSConv. Despite the repeated
+                    selection of the DSConv by DARTS, the alpha values for the normal cell in the final epoch indicated
+                    that there was no strong preference for any of the blocks, and that the selection of the DSConv was
+                    random.
 
                 </p>
                 <h2>
@@ -223,9 +220,9 @@
 
 
 
-                    <a href="#" class="image fit"><img src="images/normal.gif" alt="normal" /></a>
-                    <a href="#" class="image fit"><img src="images/reduce.gif" alt="reduce" /></a>
-                    <a href="#" class="image fit"><img src="images/loss_accuracy.png" alt="loss_accuracy" /></a>
+                    <a class="image fit"><img src="images/normal.gif" alt="normal" /></a>
+                    <a class="image fit"><img src="images/reduce.gif" alt="reduce" /></a>
+                    <a class="image fit"><img src="images/loss_accuracy.png" alt="loss_accuracy" /></a>
 
                     The training log can be found on github:
                 <ul class="actions special">
@@ -292,7 +289,7 @@
 
                 <section>
                     <h3>Email</h3>
-                    <p><a href="#">hendrikjekel@gmail.com</a></p>
+                    <p><a>hendrikjekel@gmail.com</a></p>
                 </section>
                 <section>
                     <h3>Social</h3>
